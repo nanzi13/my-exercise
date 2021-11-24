@@ -1,0 +1,35 @@
+{
+  "name": "my-exercise",
+  "version": "1.0.0",
+  "description": "* React     * hook使用  * Typescript * webpack * sass * axios     * 全局请求拦截处理     * 全局token过期处理 * react-query     * 缓存机制     * 缓存刷新 * react-router * eslint * pre-commit hook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanzi13/my-exercise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nanzi13/my-exercise/issues"
+  },
+  "homepage": "https://github.com/nanzi13/my-exercise#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb": "^19.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-promise": "^5.1.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-unicorn": "^39.0.0",
+    "prettier": "^2.4.1",
+    "typescript": "^4.5.2"
+  }
+}
