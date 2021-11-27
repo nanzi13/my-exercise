@@ -2,6 +2,40 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { isDev, PROJECT_PATH } = require('../constant');
 
+const getCssLoaders = importLoaders => [
+  'style-loader',
+  {
+    loader: 'css-loader',
+    options: {
+      modules: false, // 默认就是 false, 若要开启，可在官网具体查看可配置项
+      sourceMap: isDev, // 开启后与 devtool 设置一致, 开发环境开启，生产环境关闭
+      importLoaders: 0, // 指定在 CSS loader 处理前使用的 loader 数量
+    },
+  },
+  {
+    loader: 'postcss-loader',
+    options: {
+      sourceMap: isDev,
+      postcssOptions: {
+        plugins: [
+          'postcss-flexbugs-fixes',
+          [
+            'postcss-preset-env',
+            {
+              autoprefixer: {
+                grid: true,
+                flexbox: 'no-2009',
+              },
+              stage: 3,
+            },
+          ],
+          'postcss-normalize',
+        ],
+      },
+    },
+  },
+];
+
 module.exports = {
     // 入口文件是src下的index.js
     entry: {
@@ -27,5 +61,39 @@ module.exports = {
                 minifyURLs: true,
             },
         }),
-    ]
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: getCssLoaders(1),
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    ...getCssLoaders(2),
+                    {
+                        loader: 'less-loader',
+                        options: {
+                            sourceMap: isDev,
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    ...getCssLoaders(2),
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: isDev,
+                        },
+                    },
+                ],
+            },
+        ],
+    },
 };
+
+
