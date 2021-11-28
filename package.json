@@ -20,9 +20,12 @@
   },
   "homepage": "https://github.com/nanzi13/my-exercise#readme",
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "autoprefixer": "^10.4.0",
+    "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.5.1",
@@ -59,5 +62,9 @@
     "not dead",
     "ie >= 9",
     "not op_mini all"
-  ]
+  ],
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
 }

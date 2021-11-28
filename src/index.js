@@ -1,5 +1,7 @@
-import './index.scss';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-const root = document.querySelector('#root');
-root.innerHTML = 'hello, webpack!';
+ReactDOM.render(<App />, document.querySelector('#root'));
+
 
