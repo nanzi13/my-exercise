@@ -5,7 +5,7 @@ interface IProps {
     age: number
 }
 
-const App = function App (props: IProps) {
+const App = function App(props: IProps) {
   const { name, age } = props;
   return (
     <div className='app'>
