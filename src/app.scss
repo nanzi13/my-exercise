@@ -1,0 +1,44 @@
+.nav {
+  background: aliceblue;
+  width: 100%;
+  float: left;
+  height: 60px;
+  position: relative;
+  margin-left: -8px;
+  top: -20px;
+  min-width: 1792px;
+
+  .logo {
+    margin: 0 15px;
+    position: relative;
+    height: 40px;
+    top: -7px;
+  }
+
+  li {
+    float: left;
+    padding: 0 15px;
+    list-style: none;
+    .title {
+      position: relative;
+      display: block;
+      height: 30px;
+      cursor: pointer;
+      color: #276692;
+      text-decoration: none;
+    }
+  }
+
+  .title:hover {
+    text-decoration: underline 2px;
+  }
+
+  .title:active {
+
+  }
+
+  ul {
+    margin-left: 100px;
+    height: 30px;
+  }
+}
