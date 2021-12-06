@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Link, Routes } from 'react-router-dom';
-import Home from 'Components/Home';
+import Home from 'Components/Home/Home';
 import UserArticle from 'Components/UserArticle';
 import Navi from 'Components/Navi';
 import Project from 'Components/Project';
@@ -19,7 +19,7 @@ const App = function App() {
           <ul>
             <li id="logo">
               <a href="http://localhost:8080/">
-                <img src="./logo.png" alt="Logo" className="logo"/>
+                <img src="assets/logo.png" alt="Logo" className="logo"/>
               </a>
             </li>
             <li id="home">
