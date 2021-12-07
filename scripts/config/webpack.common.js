@@ -1,9 +1,9 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
-const { isDev, PROJECT_PATH } = require('../constant');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
+const { isDev, PROJECT_PATH } = require('../constant')
 
-const getCssLoaders = importLoaders => [
+const getCssLoaders = () => [
   'style-loader',
   {
     loader: 'css-loader',
@@ -35,7 +35,7 @@ const getCssLoaders = importLoaders => [
       },
     },
   },
-];
+]
 
 module.exports = {
   // 入口文件是src下的index.js
@@ -51,10 +51,9 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.json'],
     alias: {
-      'Src': path.resolve(PROJECT_PATH, './src'),
-      'Components': path.resolve(PROJECT_PATH, './src/components'),
-      'Utils': path.resolve(PROJECT_PATH, './src/utils'),
-    }
+      'src': path.resolve(PROJECT_PATH, './src'),
+      'components': path.resolve(PROJECT_PATH, './src/components'),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -93,12 +92,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: getCssLoaders(1),
+        use: getCssLoaders(),
       },
       {
         test: /\.less$/,
         use: [
-          ...getCssLoaders(2),
+          ...getCssLoaders(),
           {
             loader: 'less-loader',
             options: {
@@ -110,7 +109,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          ...getCssLoaders(2),
+          ...getCssLoaders(),
           {
             loader: 'sass-loader',
             options: {
@@ -146,6 +145,6 @@ module.exports = {
       },
     ],
   },
-};
+}
 
 

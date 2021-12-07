@@ -1,15 +1,18 @@
-import React from 'react';
-import { BrowserRouter, Route, Link, Routes } from 'react-router-dom';
-import Home from 'Components/Home/Home';
-import UserArticle from 'Components/UserArticle';
-import Navi from 'Components/Navi';
-import Project from 'Components/Project';
-import ProjectIndex from 'Components/ProjectIndex';
-import Tree from 'Components/Tree';
-import Tools from 'Components/Tools';
-import Wenda from 'Components/Wenda';
-import Wx from 'Components/Wx';
-import './app.scss';
+import React from 'react'
+import { BrowserRouter, Route, Link, Routes } from 'react-router-dom'
+
+import Home from './pages/home/Home'
+import QuestionAndAnswer from './pages/QuestionAndAnswer'
+import Tree from './pages/Tree'
+import UserArticle from './pages/UserArticle'
+import Navi from './pages/Navi'
+import ProjectIndex from './pages/ProjectIndex'
+import WechatOfficialAccount from './pages/WechatOfficialAccount'
+import Project from './pages/Project'
+import Tools from './pages/Tools'
+
+import './app.scss'
+
 
 const App = function App() {
   return (
@@ -73,16 +76,16 @@ const App = function App() {
           <Route path="/" element={<Home />} />
           <Route path="/user_article" element={<UserArticle />} />
           <Route path="/navi" element={<Navi />} />
-          <Route path="/wenda" element={<Wenda />} />
+          <Route path="/wenda" element={<QuestionAndAnswer />} />
           <Route path="/tree" element={<Tree />} />
           <Route path="/project_index" element={<ProjectIndex />} />
-          <Route path="/wx" element={<Wx />} />
+          <Route path="/wx" element={<WechatOfficialAccount />} />
           <Route path="/project" element={<Project />} />
           <Route path="/tools" element={<Tools />} />
         </Routes>
       </BrowserRouter>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
