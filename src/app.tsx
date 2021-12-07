@@ -11,6 +11,8 @@ import WechatOfficialAccount from './pages/WechatOfficialAccount'
 import Project from './pages/Project'
 import Tools from './pages/Tools'
 
+import logo from './assets/logo.png'
+
 import './app.scss'
 
 
@@ -22,7 +24,7 @@ const App = function App() {
           <ul>
             <li id="logo">
               <a href="http://localhost:8080/">
-                <img src="assets/logo.png" alt="Logo" className="logo"/>
+                <img src={logo} alt="Logo" className="logo"/>
               </a>
             </li>
             <li id="home">
@@ -40,8 +42,8 @@ const App = function App() {
                 导航
               </Link>
             </li>
-            <li id="wenda">
-              <Link to="/wenda" className="title">
+            <li id="Q_and_A">
+              <Link to="/Q_and_A" className="title">
                 问答
               </Link>
             </li>
@@ -55,8 +57,8 @@ const App = function App() {
                 项目
               </Link>
             </li>
-            <li id="wx">
-              <Link to="/wx" className="title">
+            <li id="Wechat_official_account">
+              <Link to="/Wechat_official_account" className="title">
                 公众号
               </Link>
             </li>
@@ -76,10 +78,10 @@ const App = function App() {
           <Route path="/" element={<Home />} />
           <Route path="/user_article" element={<UserArticle />} />
           <Route path="/navi" element={<Navi />} />
-          <Route path="/wenda" element={<QuestionAndAnswer />} />
+          <Route path="/Q_and_A" element={<QuestionAndAnswer />} />
           <Route path="/tree" element={<Tree />} />
           <Route path="/project_index" element={<ProjectIndex />} />
-          <Route path="/wx" element={<WechatOfficialAccount />} />
+          <Route path="/Wechat_official_account" element={<WechatOfficialAccount />} />
           <Route path="/project" element={<Project />} />
           <Route path="/tools" element={<Tools />} />
         </Routes>

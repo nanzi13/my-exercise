@@ -3,9 +3,9 @@
   width: 100%;
   float: left;
   height: 60px;
-  position: relative;
+  position: fixed;
   margin-left: -8px;
-  top: -20px;
+  top: 0;
   min-width: 1792px;
 
   .logo {
@@ -31,10 +31,6 @@
 
   .title:hover {
     text-decoration: underline 2px;
-  }
-
-  .title:active {
-
   }
 
   ul {

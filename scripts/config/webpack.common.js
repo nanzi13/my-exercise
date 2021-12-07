@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const { isDev, PROJECT_PATH } = require('../constant')
 
-const getCssLoaders = () => [
+const getCssLoaders = () => {return [
   'style-loader',
   {
     loader: 'css-loader',
@@ -35,7 +35,7 @@ const getCssLoaders = () => [
       },
     },
   },
-]
+]}
 
 module.exports = {
   // 入口文件是src下的index.js
@@ -92,12 +92,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: getCssLoaders(),
+        use: getCssLoaders(1),
       },
       {
         test: /\.less$/,
         use: [
-          ...getCssLoaders(),
+          ...getCssLoaders(2),
           {
             loader: 'less-loader',
             options: {
@@ -109,7 +109,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          ...getCssLoaders(),
+          ...getCssLoaders(2),
           {
             loader: 'sass-loader',
             options: {
