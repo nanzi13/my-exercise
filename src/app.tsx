@@ -17,13 +17,15 @@ import './app.scss'
 
 
 const App = function App() {
+  const BASE_URL = 'http://localhost:8080/'
+
   return (
     <div className="app">
       <BrowserRouter>
         <div className="nav">
           <ul>
             <li id="logo">
-              <a href="http://localhost:8080/">
+              <a href={BASE_URL}>
                 <img src={logo} alt="Logo" className="logo"/>
               </a>
             </li>

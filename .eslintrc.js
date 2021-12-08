@@ -45,6 +45,6 @@ module.exports = {
     '@typescript-eslint/no-var-requires': OFF,
     'react/jsx-filename-extension': [ERROR, { 'extensions': ['.js', '.jsx', '.ts', '.tsx'] }],
     'react/function-component-definition':OFF,
-    'arrow-body-style': ['error', 'always'],
+    'arrow-body-style': ['off', 'always'],
   },
 }
