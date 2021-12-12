@@ -14,10 +14,11 @@ import Tools from './pages/Tools'
 import logo from './assets/logo.png'
 
 import './app.scss'
+import ArticleList from './pages/home/articleList/ArticleList'
+
 
 
 const App = function App() {
-  const BASE_URL = 'http://localhost:8080/'
 
   return (
     <div className="app">
@@ -25,12 +26,12 @@ const App = function App() {
         <div className="nav">
           <ul>
             <li id="logo">
-              <a href={BASE_URL}>
+              <Link to='/'>
                 <img src={logo} alt="Logo" className="logo"/>
-              </a>
+              </Link>
             </li>
             <li id="home">
-              <Link to="/" className="title">
+              <Link to="/index" className="title">
                 首页
               </Link>
             </li>
@@ -77,7 +78,8 @@ const App = function App() {
           </ul>
         </div>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path='//*' element={<Home />}/>
+          <Route path="/index/*" element={<Home />} />
           <Route path="/user_article" element={<UserArticle />} />
           <Route path="/navi" element={<Navi />} />
           <Route path="/Q_and_A" element={<QuestionAndAnswer />} />
